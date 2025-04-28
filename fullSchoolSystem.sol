@@ -2,6 +2,18 @@
 pragma solidity ^0.8.0;
 
 
+contract Parent {
+    function sayHello() public pure returns (string memory) {
+        return "Hello from Parent";
+    }
+}
+
+contract Child is Parent {
+    function sayHelloFromChild() public pure returns (string memory) {
+        return "Hello from Child";
+    }
+}
+
 contract School {
     string public schoolName;
 
